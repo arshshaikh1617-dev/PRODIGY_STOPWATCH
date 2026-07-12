@@ -1,0 +1,287 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Reset */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    background:linear-gradient(135deg,#4facfe,#00f2fe);
+    overflow:hidden;
+}
+
+/* Main Card */
+.container{
+    width:430px;
+    padding:35px;
+    text-align:center;
+
+    background:rgba(255,255,255,0.18);
+    backdrop-filter:blur(15px);
+    -webkit-backdrop-filter:blur(15px);
+
+    border:1px solid rgba(255,255,255,.3);
+
+    border-radius:20px;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.25);
+
+    animation:fadeIn .8s ease;
+}
+
+/* Heading */
+h1{
+    color:#fff;
+    font-size:34px;
+    margin-bottom:10px;
+    letter-spacing:1px;
+}
+
+h1 i{
+    margin-right:8px;
+}
+
+/* Date */
+#currentDate{
+    color:#fff;
+    margin-bottom:20px;
+    font-size:15px;
+    font-weight:500;
+}
+
+/* Stopwatch Display */
+#display{
+
+    background:#111;
+
+    color:#00ff88;
+
+    padding:20px;
+
+    font-size:2.7rem;
+
+    font-weight:bold;
+
+    border-radius:15px;
+
+    letter-spacing:3px;
+
+    margin-bottom:25px;
+
+    box-shadow:
+        0 0 10px #00ff88,
+        0 0 20px rgba(0,255,136,.5);
+
+    transition:.3s;
+}
+
+/* Buttons */
+.buttons{
+    display:flex;
+    gap:10px;
+    margin-bottom:25px;
+}
+
+button{
+
+    flex:1;
+
+    padding:12px;
+
+    border:none;
+
+    border-radius:10px;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    color:white;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.25);
+}
+
+button i{
+    margin-right:5px;
+}
+
+button:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 10px 20px rgba(0,0,0,.3);
+}
+
+button:active{
+
+    transform:scale(.95);
+}
+
+button:disabled{
+
+    background:#8b8b8b;
+
+    cursor:not-allowed;
+
+    transform:none;
+
+    box-shadow:none;
+
+    opacity:.6;
+}
+
+/* Button Colors */
+
+#start{
+    background:#28a745;
+}
+
+#pause{
+    background:#ffc107;
+    color:#222;
+}
+
+#reset{
+    background:#dc3545;
+}
+
+#lap{
+    background:#007bff;
+}
+
+/* Lap Section */
+
+.lap-container{
+
+    text-align:left;
+}
+
+.lap-container h2{
+
+    color:white;
+
+    margin-bottom:12px;
+
+    font-size:20px;
+}
+
+#lapList{
+
+    list-style:none;
+
+    max-height:180px;
+
+    overflow-y:auto;
+
+    padding-right:5px;
+}
+
+/* Lap Card */
+
+#lapList li{
+
+    background:rgba(255,255,255,.9);
+
+    margin-bottom:10px;
+
+    padding:12px;
+
+    border-left:5px solid #007bff;
+
+    border-radius:8px;
+
+    transition:.3s;
+}
+
+#lapList li:hover{
+
+    transform:translateX(6px);
+
+    background:#dff2ff;
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar{
+    width:6px;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#00ff88;
+    border-radius:10px;
+}
+
+/* Footer */
+
+footer{
+
+    margin-top:25px;
+
+    color:white;
+
+    font-size:14px;
+
+    font-weight:500;
+
+    letter-spacing:.5px;
+}
+
+/* Animation */
+
+@keyframes fadeIn{
+
+    from{
+        opacity:0;
+        transform:translateY(-40px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* Responsive */
+
+@media(max-width:500px){
+
+    .container{
+
+        width:92%;
+
+        padding:25px;
+    }
+
+    .buttons{
+
+        flex-direction:column;
+    }
+
+    button{
+
+        width:100%;
+    }
+
+    #display{
+
+        font-size:2rem;
+    }
+
+    h1{
+
+        font-size:28px;
+    }
+}

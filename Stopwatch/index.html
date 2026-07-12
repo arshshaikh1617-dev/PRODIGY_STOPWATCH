@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stopwatch Web Application</title>
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- CSS File -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>
+            <i class="fa-solid fa-stopwatch"></i>
+            Stopwatch
+        </h1>
+
+        <!-- Current Date -->
+        <div id="currentDate"></div>
+
+        <!-- Stopwatch Display -->
+        <div id="display">00:00:00:000</div>
+
+        <!-- Buttons -->
+        <div class="buttons">
+
+            <button id="start">
+                <i class="fa-solid fa-play"></i> Start
+            </button>
+
+            <button id="pause">
+                <i class="fa-solid fa-pause"></i> Pause
+            </button>
+
+            <button id="reset">
+                <i class="fa-solid fa-rotate-left"></i> Reset
+            </button>
+
+            <button id="lap">
+                <i class="fa-solid fa-flag-checkered"></i> Lap
+            </button>
+
+        </div>
+
+        <!-- Lap Times -->
+        <div class="lap-container">
+            <h2>Lap Times</h2>
+            <ul id="lapList"></ul>
+        </div>
+
+    </div>
+
+    <footer>
+        Developed by Arsh Shaikh
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>
